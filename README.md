@@ -89,10 +89,12 @@ resetSectionメソッドがコールされた時、セクションのリセッ�
 
 #### flicksectionresetイベント
 セクションリセットイベント。resetSectionメソッドがコールされた時、flickbeforesectionresetイベントの後に発生するイベント。具体的には以下のフローとなる。
+
 1. flickbeforesectionresetイベント発生
 2. 現在のセクションを削除
 3. セクションのスケルトンを新規に追加
 4. flicksectionresetイベント発生
+
 このイベントでは新規に生成したセクションの内容を構築する処理を記述する
 
 #### flicksectionaddイベント
