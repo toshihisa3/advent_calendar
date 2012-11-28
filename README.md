@@ -6,9 +6,9 @@ Advent Calendar Blog Material
 利用しているプラグイン
 -------
 
-* [jQuery1.7.2][http://jquery.com/] -- jQueryの本体です
-* [jQuery Templates][http://api.jquery.com/category/plugins/templates/] -- ベータ版です。現在は開発がストップしています。今後新しいテンプレートにリプレースされるようです
-* [jQuery.flickable][http://lagoscript.org/jquery/flickable] -- 今回の主役です。フリックスクロールを可能にします
+* [jQuery1.7.2](http://jquery.com/) -- jQueryの本体です
+* [jQuery Templates](http://api.jquery.com/category/plugins/templates/) -- ベータ版です。現在は開発がストップしています。今後新しいテンプレートにリプレースされるようです
+* [jQuery.flickable](http://lagoscript.org/jquery/flickable) -- 今回の主役です。フリックスクロールを可能にします
 
 利用方法
 ------------
