@@ -13,7 +13,7 @@ Advent Calendar Blog Material
 利用方法
 ------------
 
-基本的な使い方は[こちら][http://lagoscript.org/jquery/flickable/documentation]を参照。
+基本的な使い方は[こちら](http://lagoscript.org/jquery/flickable/documentation)を参照。
 
 
 ### 追加した機能の説明
