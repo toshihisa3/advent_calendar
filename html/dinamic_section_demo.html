@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>jQuery.flickable - Custom demo</title>
+
+    <link href="../css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="../css/print.css" media="print" rel="stylesheet" type="text/css">
+    <!--[if lt IE 8]><link href="../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" /><![endif]-->
+    <link href="../css/style.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js" type="text/javascript"></script>
+    <script src="../js/jquery.flickable-1.0b4.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.demo').each(function() {
+                var source = $('.demo_source', this);
+                source.hide().find('code').text($.trim($('.demo_frame', this).html()));
+                $('.view_source', this).click(function() {
+                    source.toggle();
+                    return false;
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+            <div class="span-18 last">
+                <h1>jQuery.flickable</h1>
+                <h3 class="alt">iPhone and Android like flick scrolling plugin(cybozu edition)</h3>
+                <h3 class="alt">Original site is <cite><a href="http://lagoscript.org/jquery/flickable/" target="_brank">here</a></cite>.</h3>
+            </div>
+        </div>
+
+        <hr class="space">
+
+        <div id="contents" class="span-24 last">
+            <hr class="space">
+            <h2>Examples</h2>
+            <hr class="space">
+
+            <div class="demo">
+                <h3>Section</h3>
+                <p>セクションを設定するとその要素を基準にスクロールするようになります。iPhoneのホーム画面のようなUIを再現できます。</p>
+                <p><a href="#" class="view_source">ソースを見る / View Source</a></p>
+                <pre class="demo_source" style="display: none; ">
+                    <code></code>
+　　　　　　　　</pre>
+
+                <div class="demo_frame">
+                    <style type="text/css">
+                        #flickable {
+                            border: 1px solid #CCC;
+                            height: 170px;
+                            overflow: auto;
+                            width: 475px;
+                        }
+                        #flickable ul {
+                            list-style: none;
+                            margin: 0;
+                            padding: 5px;
+                            width:1425px;
+                        }
+                        #flickable ul li {
+                            float: left;
+                            margin: 0;
+                            padding: 10px 15px;
+                            width: 445px;
+                        }
+                        #flickable .block {
+                            color: #FFF;
+                            height: 110px;
+                            padding: 5px;
+                            width: 435px;
+                        }
+                        #flickable h4 {
+                            color: #FFF;
+                        }
+                        #flickable .ui-flickable-container {
+                            cursor: pointer;
+                        }
+                    </style>
+
+                    <script type="text/javascript">
+                        $(function() {
+                            $('#flickable').flickable({
+                                section: 'li'
+                              });
+                        });
+                    </script>
+
+                    <div id="flickable">
+                        <ul>
+                            <li><div class="block" style="background-color:#036;"><h4>Section 1</h4><p>Aenean duis penatibus habitasse nascetur porttitor, nascetur aliquam dapibus augue vut vut, aliquet adipiscing odio? Pulvinar phasellus! Rhoncus? Et porta integer et ac ac turpis, diam nunc nunc non, tincidunt.</p></div></li>
+                            <li><div class="block" style="background-color:#603;"><h4>Section 2</h4><p>Dapibus adipiscing! Vut ac mauris integer nascetur dapibus, in aliquam, quis risus elementum mus elementum cum? Porta eros nisi ut. Vut sed vel ut et a porta magna lacus turpis.</p></div></li>
+                            <li><div class="block" style="background-color:#360;"><h4>Section 3</h4><p>Nisi lorem tincidunt, ultricies rhoncus purus odio lorem odio proin platea in dis odio, sed, etiam! Ridiculus, elit enim rhoncus elit augue facilisis turpis! Adipiscing sagittis? Dis ultricies. Natoque duis.</p></div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="largespace">
+
+            <div class="demo">
+                <h3>Dinamic section</h3>
+                <p>セクションを動的に追加します(10件の一覧情報を設定)。</p>
+                <p><a href="#" class="view_source">ソースを見る / View Source</a></p>
+                <pre class="demo_source" style="display: none; ">
+                    <code></code>
+                </pre>
+
+                <div class="demo_frame">
+                    <style type="text/css">
+                        #flick-custom {
+                            border: 1px solid #CCC;
+                            height: 170px;
+                            overflow: auto;
+                            width: 475px;
+                        }
+                        #flick-custom ul {
+                            list-style: none;
+                            margin: 0;
+                            padding: 5px;
+                            width:1425px;
+                        }
+                        #flick-custom ul li {
+                            float: left;
+                            margin: 0;
+                            padding: 10px 15px;
+                            width: 445px;
+                        }
+                        #flick-custom .block {
+                            color: #FFF;
+                            height: 110px;
+                            padding: 5px;
+                            width: 435px;
+                        }
+                        #flick-custom .bgcoler-0 {
+                            background-color:#360;
+                        }
+                        #flick-custom .bgcoler-1 {
+                            background-color:#036;
+                        }
+                        #flick-custom .bgcoler-2 {
+                            background-color:#603;
+                        }
+                        #flick-custom h4 {
+                            color: #FFF;
+                        }
+                        #flick-custom .ui-flickable-container {
+                            cursor: pointer;
+                        }
+                    </style>
+
+                    <script type="text/javascript">
+                      $(function() {
+                            //templateを展開
+                            $('#flickSectionTemplate').template('flickSectionTemplate');
+
+                            var flickObj   = $('#flick-custom').flickable({
+                                                                    section: 'li'
+                                                                  , isDynamicWidth: true
+                                                              });
+
+                            //セクションチェンジイベント
+                            //セクションが切り替わった行いたい処理を書く
+                            flickObj.on('flickchange', function(event, ui)
+                            {
+                                if( ui.newSection )
+                                {
+                                    var sectionObj    = $('#' + ui.newSection.attr('id'));
+                                }
+
+                                if( ui.oldSection )
+                                {
+                                    var sectionObj    = $('#' + ui.oldSection.attr('id'));
+                                }
+                            });
+
+                            //セクションリセット前イベント
+                            //セクションのリセット処理が実行される直前に発生するイベント
+                            flickObj.on('flickbeforesectionreset', function(event, eventParams)
+                            {
+
+                            });
+
+                            //セクションリセットイベント
+                            //始まりのイベント。
+                            //セクションのリセット処理が呼ばれて最初に発生するイベント
+                            flickObj.on('flicksectionreset', function(event, eventParams)
+                            {
+                                _sectionMaker(event, eventParams);
+                            });
+
+                            //セクション追加イベント
+                            //先読み機能
+                            //今表示しているセクションの前セクション、次セクションがある場合に発生するイベント
+                            flickObj.on('flicksectionadd', function(event, eventParams)
+                            {
+                                _sectionMaker(event, eventParams);
+                            });
+
+                            var _sectionMaker    = function(inEvent, inEventParams){
+                                                        //セクションのロード開始。以降、endSectionLoadがコールされるまでセクションの追加ができない
+                                                        flickObj.flickable('beginSectionLoad');
+
+                                                        //実際はajaxを使ってサーバーから情報を取得してセクション内に挿入する
+                                                                      //今回はサーバーのかわりにダミー情報を返すメソッドを使用する
+                                                        var nextId    = _nextSectionDBRecordDummySequenceNoMaker(inEventParams.sequenceNo);
+                                                        var prevId    = _prevSectionDBRecordDummySequenceNoMaker(inEventParams.sequenceNo);
+
+                                                        //このイベント自身がリセット強制処理または、イベント呼び出し元がリセット処理中でなければ、終了処理を実行する
+                                                        if( inEventParams.isResetProcess || !flickObj.flickable('isSectionReset') )
+                                                        {
+                                                            //次セクションのセクションIDの設定
+                                                            if(inEventParams.addType == 'current' || inEventParams.addType == 'next')
+                                                            {
+                                                                flickObj.flickable('setNextSectionId', nextId);
+                                                            }
+
+                                                            //前セクションのセクションIDの設定
+                                                            if(inEventParams.addType == 'current' || inEventParams.addType == 'prev')
+                                                            {
+                                                                flickObj.flickable('setPrevSectionId', prevId);
+                                                            }
+
+                                                            //セクションのロード終了
+                                                            flickObj.flickable('endSectionLoad');
+                                                        }
+                                                    };
+
+                            //サーバーアクセスのダミー。表示する情報がデータベースに10レコードある想定
+                            var _nextSectionDBRecordDummySequenceNoMaker    = function(id){
+                                                        return (id < 10) ? id + 1 : null;
+                                                    };
+
+                            var _prevSectionDBRecordDummySequenceNoMaker    = function(id){
+                                                        return (id > 1) ? id - 1 : null;
+                                                    };
+
+                            //実際はajaxを使ってサーバーから情報を取得して設定する
+                            //今回は初期表示セクションとして、データベースの5番目にあるレコードの表示を想定
+                            var filickOptionObj =  {
+                                                      sectionManagerClassSelecter : 'ul'
+                                                    , jqTemplateName : 'flickSectionTemplate'
+                                                    , eventParam : {sequenceNo : 5}
+                                                    };
+
+                            //フリックセクションリセットをコールする
+                            flickObj.flickable('resetSection', filickOptionObj);
+                      });
+                    </script>
+
+                    <script id="flickSectionTemplate" type="text/x-jquery-tmpl">
+                        <li id=${sectionId}>
+                            <div id="value-${sectionId}" class="block bgcoler-${sequenceNo % 3}">
+                                <h4>Section ${sequenceNo} (database record sequence number)</h4>
+                                <p>This is the section that was added dynamically. 
+                                   This is a feature that has been added to the original plugin.
+                                   This is useful for displaying information of N record in conjunction with the database.
+                                </p>
+                            </div>
+                        </li>
+                    </script>
+
+                    <div id="flick-custom">
+                        <ul></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="space">
+
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+body {
+ -webkit-text-size-adjust: none;
+}
+a {
+    color: #06C;
+    /*text-decoration: none;*/
+}
+a:hover {
+    color: #39F;
+}
+h1 {
+    color:#333;
+    font-size:4.5em;
+    font-weight:bold;
+    letter-spacing: -3px;
+    margin-bottom:5px;
+}
+h2 {
+    color:#333;
+    font-size:2.5em;
+    font-weight:bold;
+}
+h3 {
+    font-weight:bold;
+}
+h4 {
+    font-size:1.1em;
+    font-weight:bold;
+}
+p {
+    font-size:1.1em;
+    margin-bottom:1em;
+}
+pre {
+    background-color:#EEE;
+    border:1px solid #CCC;
+    padding:5px 10px;
+    overflow: auto;
+}
+
+.alt {
+    color:#666;
+    font-family:'Warnock Pro','Goudy Old Style','Palatino','Book Antiqua', Georgia, serif;
+    font-style:italic;
+    font-weight:normal;
+}
+h3.alt {
+    font-size:2em;
+    margin-bottom:0.75em;
+}
+
+hr.largespace {
+	visibility:hidden;
+	height:100px;
+	margin:0;
+	padding:0;
+}
+
+#header {
+    margin-top: 50px;
+}
+#header ul.nav {
+    display:inline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#header ul.nav li.border {
+    border-right:1px solid #CCC;
+    margin-right:5px;
+    padding-right:4px;
+}
+#header ul.nav li a {
+    color: #666;
+    display: block;
+    font-size: 1.75em;
+    text-align:center;
+    text-decoration: none;
+}
+#header ul.nav li a:hover {
+    color: #333;
+    background-color: #CCC;
+}
+
+#header ul.tabs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width:100%;
+}
+#header ul.tabs li a {
+    background-color: #666;
+    border: 1px solid #666;
+    border-bottom: none;
+    color: #EEE;
+    display: block;
+    font-size: 1.5em;
+    padding: 2px;
+    text-align:center;
+    text-decoration: none;
+}
+#header ul.tabs li a:hover {
+    background-color: #999;
+    border: 1px solid #999;
+    border-bottom: none;
+    color: #333;
+}
+#header ul.tabs li a.active {
+    background-color: transparent;
+    border: 1px solid #999;
+    border-bottom: none;
+    color: #333;
+}
+
+#footer {
+    margin-bottom: 250px;
+}
+
+#projects ul {
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+#projects ul li {
+    margin-bottom:1em;
+    padding:0;
+}
+#projects ul li a {
+    color:#CCC;
+    display:block;
+    font-size:5em;
+    font-weight:bold;
+    letter-spacing: -3px;
+    line-height:1em;
+    text-decoration: none;
+    padding:20px 30px;
+}
+#projects ul li a:hover {
+    color:#333;
+    background-color:#EEE;
+}
+#projects ul li a .alt {
+    color:#CCC;
+    display:block;
+    font-size:0.5em;
+    letter-spacing:0;
+    line-height:1.25em;
+}
+#projects ul li a:hover .alt {
+    color:#666;
+}
+
+.comments {
+	padding-bottom:50px;
+}
+.comments dt {
+	font-size:1.25em;
+}
+.comments dd {
+	margin:0;
+}
+.comments a {
+    text-decoration: none;
+}
+.comment_form {
+    background-color:#EEE;
+}
+
+.documentation dt {
+    float: left;
+    margin-right: 10px;
+}
+
+.date {
+    color:#666;
+	font-size:0.75em;
+	font-weight:normal;
+	padding-left:15px;
+}
